@@ -10,9 +10,31 @@ def decidePerson():
     else:
         print("Senior Citizen")
 
+def takeNumber():
+    number = int(input("Enter a number: "))
+    return number
+
+def checkNumber(num):
+    return bool(num % 2)
+
+def checkOddEven(number):
+    # number = takeNumber()
+    if checkNumber(number):
+        print(f"{number} - odd")
+    else:
+        print(f"{number} - even")    
+    
+def checkOddEvenList():
+    upper_limit = int(input("Enter a number: "))
+    for num in range(1, upper_limit + 1):
+        checkOddEven(num)
+
 def main():
     greet()
-    decidePerson()
+    # decidePerson()
+    # checkOddEven()
+    checkOddEvenList()
+
 
 if __name__ == "__main__":
     main()
